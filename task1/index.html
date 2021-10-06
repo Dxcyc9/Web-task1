@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大宝贝助手</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class='main'>
+        <div class='box'>
+            <div class="box1">
+                <div class="image">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+            </div>
+            <div class="box2">
+                <p>大宝贝助手</p>
+                <a href="#" class="doc" id="test">选择上传文件</a>
+
+                <label class="select" for="xFile1">选择文件</label>
+                <input multiple type="file" id="xFile1"></input>
+
+                <label class="uploading" for="xFile2">上传文件</label>
+                <input type="file" id="xFile2"></input>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var inp = document.getElementById("xFile1");
+    inp.onchange = function () {
+        var change = document.getElementById("test");
+        var fileInput = document.querySelector("#xFile1");
+        var files = fileInput.files;
+        change.text = files[0].name;
+    };
+</script>
+
+</html>
